@@ -279,8 +279,6 @@ form > span {
     }
 
     .bg-pattern {
-        display: block;
-        position: absolute;
         bottom: -40px;
         right: 0;
     }
