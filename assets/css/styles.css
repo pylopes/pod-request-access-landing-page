@@ -90,13 +90,14 @@ main {
 .media {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
 .apps-media {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .apps-media > img {
@@ -135,20 +136,22 @@ form > input {
     margin-top: 10px;
 }
 
-form > span {
-    display: none;
-    padding-top: 8px;
-    padding-left: 32px;
-    color: var(--red);
-    font-family: var(--chivo-font);
-    font-size: 12px;
-    font-weight: bold;
-}
-
 .bg-image-tablet,
 .bg-image-desktop,
 .bg-pattern {
     display: none;
+}
+
+.error-message {
+    color: var(--red);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--chivo-font);
+    padding: 8px 0 8px 32px;
+}
+
+.error-email {
+    border: 2px solid var(--red);
 }
 
 @media (width >= 768px) {
@@ -207,20 +210,37 @@ form > span {
 
     form {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
-        background-color: var(--blue-900);
-        border-radius: 28px;
-        padding: 5px;
+        justify-content: center;
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .input-email {
-        max-width: 100%;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-right: 45%;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
     
     .btn-request {
-        max-width: 173px;
+        position: absolute;
         margin-top: 0;
+        width: 40%;
+        right: 5px;
+    }
+
+    .btn-request:hover {
+        background-color: #54E6AF;
+        cursor: pointer;
+    }
+
+    .error-message {
+        padding: 0 0 8px 32px;
     }
 
     .bg-pattern {
